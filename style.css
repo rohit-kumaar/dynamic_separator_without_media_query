@@ -1,0 +1,25 @@
+.section {
+  --w: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  padding: 1rem;
+  border: 1px solid;
+  margin: 2rem auto;
+  gap: 1rem;
+  overflow: hidden;
+  resize: horizontal;
+}
+.section::before {
+  content: "";
+  width: clamp(0px, (var(--w) - 100%) * 999, 100%);
+  border: 2px solid lightgray;
+}
+.section__item {
+  flex: 1;
+  min-width: 0;
+  align-self: center;
+}
+.section__item:first-child {
+  order: -1;
+}/*# sourceMappingURL=style.css.map */
